@@ -1,0 +1,40 @@
+.photo-list {
+  @include fill-parent;
+
+  @include media($medium-screen-up){
+    @include span-columns(6);
+  }
+  @include media($large-screen-up){
+    @include span-columns(9);
+  }
+ 
+
+}
+.photo-list__item {
+  background-color: $white;
+  border-radius: $base-border-radius;
+  box-shadow: 0 2px 4px 0 rgba($black, 0.1);
+  margin-bottom: $base-spacing;
+  padding: $base-spacing;
+
+  @include media($large-screen-up) {
+    @include span-columns(3 of 9);
+    @include omega(3n);
+  }
+}
+
+.photo__likes-icon {
+  color: $red;
+  font-size: 18px;
+}
+
+.photo__meta {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: $small-spacing;
+}
+
+.photo__user {
+  font-weight: 600;
+}

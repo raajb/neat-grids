@@ -1,0 +1,22 @@
+.navigation {
+  @include span-columns(4);
+  margin-bottom: $base-spacing;
+  @include media($medium-screen-up){
+    @include span-columns(2);
+
+  }
+  @include media($large-screen-up){
+    @include span-columns(3)
+  }
+
+}
+
+.navigation__link {
+  margin-right: $base-spacing;
+
+  @include media ($medium-screen-up){
+
+    display: block;
+    margin-bottom: $small-spacing;
+  }
+}

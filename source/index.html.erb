@@ -1,0 +1,23 @@
+<div class="container">
+  <nav class="navigation">
+    <a class="navigation__link" href="#">Recent Photos</a>
+    <a class="navigation__link" href="#">Your Photos</a>
+  </nav>
+
+  <div class="photo-list">
+    <% data.photos.each do |p| %>
+      <div class="photo-list__item photo">
+        <img src="<%= p.url %>">
+        <div class="photo__meta">
+          <span class="photo__user">
+            <%= p.user %>
+          </span>
+          <div>
+            <span class="photo__likes-icon">♥</span>
+            <span class="photo__likes-number"><%= p.likes %></span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
